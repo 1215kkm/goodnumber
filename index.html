@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>레이아웃2 - 김예진1</title>
     <link rel="stylesheet" href="css/style.css">
+    
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <style>
@@ -56,6 +58,10 @@
         </nav>
 
         <a href="#" class="more"></a>
+
+        <div class="brand">
+            <p>PORSCHE</p>
+        </div>
     </header>
 
     
@@ -88,7 +94,7 @@
 
 
     <div class="section_box">
-        <section class="section1">
+        <section class="section1"  data-aos="fade-up">
             <div class="container">
                 <figure><img src="images/plogo.png" alt=""></figure>
 
@@ -163,6 +169,25 @@
     </footer>
 
 
+
+
+    <script src="script/jquery-3.7.1.min.js"></script>
+
+    <script>
+        // (누구를).모모할때(실행해라(){
+        //     (누구를).보여라
+        // })
+
+        $('header .more').click(function(){
+            $('header .more').toggleClass('on');
+            $('.brand').fadeToggle();
+        });
+
+    </script>
+
+
+
+
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
@@ -175,5 +200,12 @@
             },
         });
     </script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>  <!-- 스크롤효과위해 퍼옴 -->
+    <script>
+    AOS.init();
+    </script>
+
+    
 </body>
 </html>
